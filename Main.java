@@ -1,21 +1,22 @@
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("身長（メートル単位）を入力してください：");
-        double height = scanner.nextDouble();
+        for (int i = 1; i <= 2; i++) { // 2人分の入力と計算を行うためのループ
+            System.out.println("身長（メートル単位）を入力してください（Person " + i + "）：");
+            double height = scanner.nextDouble();
 
-        System.out.println("体重（キログラム単位）を入力してください：");
-        double weight = scanner.nextDouble();
+            System.out.println("体重（キログラム単位）を入力してください（Person " + i + "）：");
+            double weight = scanner.nextDouble();
 
-        double bmi = calculateBMI(height, weight);
-        System.out.printf("あなたのBMIは %.2f です。\n", bmi);
+            double bmi = calculateBMI(height, weight);
+            System.out.printf("Person " + i + " のBMIは %.2f です。\n", bmi);
 
-        String message = interpretBMI(bmi);
-        System.out.println(message);
+            String message = interpretBMI(bmi);
+            System.out.println(message);
+        }
     }
 
     public static double calculateBMI(double height, double weight) {
