@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        for (int i = 1; i <= 2; i++) { // 2人分の入力と計算を行うためのループ
+        for (int i = 1; i <= 2; i++) { 
             System.out.println("身長（メートル単位）を入力してください（Person " + i + "）：");
             double height = scanner.nextDouble();
 
